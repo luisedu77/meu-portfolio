@@ -289,3 +289,29 @@ nav a:hover {
   color: #cbd5e1;
   border-color: rgba(255, 255, 255, 0.2);
 }
+
+
+
+/* Estilização dos Links dos Projetos */
+.links-projeto {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-link {
+  color: #00f0ff; /* Azul ciano brilhante para combinar com as tags */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border: 1px solid #00f0ff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #00f0ff;
+  color: #0d1117; /* Fundo escuro ao passar o mouse */
+  box-shadow: 0 0 10px #00f0ff; /* Efeito de brilho neon */
+}
