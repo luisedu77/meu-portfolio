@@ -26,7 +26,13 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0; /* Ajustado para ficar ao fundo */
+}
+
+/* Desativa interceptação de clique no canvas */
+#particles-js canvas,
+.particles-js-canvas-el {
+  pointer-events: none !important;
 }
 
 /* Header */
@@ -38,7 +44,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
   background-color: rgba(5, 5, 5, 0.7);
   backdrop-filter: blur(8px);
 }
@@ -73,7 +79,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 2;
+  z-index: 10;
   padding: 20px;
 }
 
@@ -149,9 +155,10 @@ nav a:hover {
   box-shadow: 0 5px 20px rgba(var(--accent-color-rgb), 0.4);
 }
 
-
 /* --- SEÇÃO SOBRE MIM --- */
 .about-section {
+  position: relative;
+  z-index: 10;
   padding: 80px 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -165,11 +172,11 @@ nav a:hover {
 }
 
 .section-title span {
-  color: #00f0ff; /* Ciano Neon */
+  color: #00f0ff;
 }
 
 .about-content {
-  background: rgba(15, 23, 42, 0.7); /* Fundo escuro semi-transparente */
+  background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 12px;
   padding: 40px;
@@ -222,6 +229,8 @@ nav a:hover {
 
 /* --- SEÇÃO PROJETOS --- */
 .projects-section {
+  position: relative;
+  z-index: 10;
   padding: 60px 20px 100px;
   max-width: 1000px;
   margin: 0 auto;
@@ -235,6 +244,8 @@ nav a:hover {
 }
 
 .project-card {
+  position: relative;
+  z-index: 10;
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 12px;
@@ -290,19 +301,17 @@ nav a:hover {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-
-
 /* Estilização dos Links dos Projetos */
 .links-projeto {
   display: flex;
   gap: 15px;
   margin-top: 15px;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .btn-link {
-  color: #00f0ff; /* Azul ciano brilhante para combinar com as tags */
+  color: #00f0ff;
   text-decoration: none;
   font-weight: bold;
   font-size: 0.9rem;
@@ -312,16 +321,11 @@ nav a:hover {
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .btn-link:hover {
   background-color: #00f0ff;
-  color: #0d1117; /* Fundo escuro ao passar o mouse */
-  box-shadow: 0 0 10px #00f0ff; /* Efeito de brilho neon */
-}
-
-/* Permite clicar nos botões por cima da animação do fundo */
-canvas {
-  pointer-events: none;
+  color: #0d1117;
+  box-shadow: 0 0 10px #00f0ff;
 }
