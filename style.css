@@ -329,3 +329,89 @@ nav a:hover {
   color: #0d1117;
   box-shadow: 0 0 10px #00f0ff;
 }
+
+/* ==========================================
+   RESPONSIVIDADE (CELULARES E TABLETS)
+   ========================================== */
+
+@media (max-width: 768px) {
+  /* Header e Navegação */
+  header {
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Hero / Home */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .profile-img img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .btn-projects {
+    padding: 12px 25px;
+    font-size: 0.75rem;
+  }
+
+  /* Seção Sobre Mim */
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .about-content {
+    padding: 20px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  /* Seção Projetos */
+  .projects-section {
+    padding: 40px 15px 60px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .links-projeto {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-link {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
